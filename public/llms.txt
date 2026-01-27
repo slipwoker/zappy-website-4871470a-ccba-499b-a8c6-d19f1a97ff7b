@@ -1,0 +1,87 @@
+# מסי הנקניק — Generative Engine Optimization Map
+
+> A מזון ומסעדנות business.
+
+---
+
+## Pages
+
+### Home
+https://-4871470a.zappy5.app
+
+### Menu
+https://-4871470a.zappy5.app/menu
+
+### About
+https://-4871470a.zappy5.app/about
+
+### Contact
+https://-4871470a.zappy5.app/contact
+
+### Products
+https://-4871470a.zappy5.app/products
+המוצרים שלנו - מסי הנקניק
+
+### Cart
+https://-4871470a.zappy5.app/cart
+עגלת הקניות שלך
+
+### Checkout
+https://-4871470a.zappy5.app/checkout
+תשלום
+
+### Login
+https://-4871470a.zappy5.app/login
+התחברות לקוחות
+
+### Account
+https://-4871470a.zappy5.app/account
+החשבון שלי
+
+### Order Success
+https://-4871470a.zappy5.app/order-success
+תודה על ההזמנה
+
+### Product Detail
+https://-4871470a.zappy5.app/product/:slug
+פרטי המוצר - מסי הנקניק
+
+### Category
+https://-4871470a.zappy5.app/category/:slug
+מוצרים - מסי הנקניק
+
+## Legal & Policy
+
+### Privacy Policy
+https://-4871470a.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-4871470a.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-4871470a.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About מסי הנקניק
+מסי הנקניק is a business in the מזון ומסעדנות industry.
+
+## Target Audience
+- חובבי בשר גורמה
+- חובבי קולינריה
+- מתכנני אירועים
+
+## Industry
+מזון ומסעדנות
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://-4871470a.zappy5.app/sitemap.xml
+- **Robots.txt**: https://-4871470a.zappy5.app/robots.txt

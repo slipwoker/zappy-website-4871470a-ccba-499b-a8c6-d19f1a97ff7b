@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/sitemap.xml
+Sitemap: https://example.com/sitemap.xml

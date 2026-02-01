@@ -1,75 +1,87 @@
-# Business — Generative Engine Optimization Map
+# מסי הנקניק — Generative Engine Optimization Map
+
+> A מזון ומסעדנות business.
 
 ---
 
 ## Pages
 
 ### Home
-https://example.com
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com
 
 ### Menu
-https://example.com/menu
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/menu
 
 ### About
-https://example.com/about
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/about
 
 ### Contact
-https://example.com/contact
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/contact
 
 ### Products
-https://example.com/products
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/products
 המוצרים שלנו - מסי הנקניק
 
 ### Cart
-https://example.com/cart
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/cart
 עגלת הקניות שלך
 
 ### Checkout
-https://example.com/checkout
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/checkout
 תשלום
 
 ### Login
-https://example.com/login
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/login
 התחברות לקוחות
 
 ### Account
-https://example.com/account
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/account
 החשבון שלי
 
 ### Order Success
-https://example.com/order-success
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/order-success
 תודה על ההזמנה
 
 ### Product Detail
-https://example.com/product/:slug
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/product/:slug
 פרטי המוצר - מסי הנקניק
 
 ### Category
-https://example.com/category/:slug
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/category/:slug
 מוצרים - מסי הנקניק
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About מסי הנקניק
+מסי הנקניק is a business in the מזון ומסעדנות industry.
+
+## Target Audience
+- חובבי בשר גורמה
+- חובבי קולינריה
+- מתכנני אירועים
+
+## Industry
+מזון ומסעדנות
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/sitemap.xml
+- **Robots.txt**: https://zappy-site-4871470a-ccba-499b-a8c6.onrender.com/robots.txt

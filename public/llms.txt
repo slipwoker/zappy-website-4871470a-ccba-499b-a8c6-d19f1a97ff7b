@@ -1,87 +1,75 @@
-# מסי הנקניק — Generative Engine Optimization Map
-
-> A מזון ומסעדנות business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
 ### Home
-https://mesi-hanaknik.zappy5.app
+https://example.com
 
 ### Menu
-https://mesi-hanaknik.zappy5.app/menu
+https://example.com/menu
 
 ### About
-https://mesi-hanaknik.zappy5.app/about
+https://example.com/about
 
 ### Contact
-https://mesi-hanaknik.zappy5.app/contact
+https://example.com/contact
 
 ### Products
-https://mesi-hanaknik.zappy5.app/products
+https://example.com/products
 המוצרים שלנו - מסי הנקניק
 
 ### Cart
-https://mesi-hanaknik.zappy5.app/cart
+https://example.com/cart
 עגלת הקניות שלך
 
 ### Checkout
-https://mesi-hanaknik.zappy5.app/checkout
+https://example.com/checkout
 תשלום
 
 ### Login
-https://mesi-hanaknik.zappy5.app/login
+https://example.com/login
 התחברות לקוחות
 
 ### Account
-https://mesi-hanaknik.zappy5.app/account
+https://example.com/account
 החשבון שלי
 
 ### Order Success
-https://mesi-hanaknik.zappy5.app/order-success
+https://example.com/order-success
 תודה על ההזמנה
 
 ### Product Detail
-https://mesi-hanaknik.zappy5.app/product/:slug
+https://example.com/product/:slug
 פרטי המוצר - מסי הנקניק
 
 ### Category
-https://mesi-hanaknik.zappy5.app/category/:slug
+https://example.com/category/:slug
 מוצרים - מסי הנקניק
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://mesi-hanaknik.zappy5.app/privacy
+https://example.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://mesi-hanaknik.zappy5.app/terms
+https://example.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://mesi-hanaknik.zappy5.app/accessibility
+https://example.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About מסי הנקניק
-מסי הנקניק is a business in the מזון ומסעדנות industry.
-
-## Target Audience
-- חובבי בשר גורמה
-- חובבי קולינריה
-- מתכנני אירועים
-
-## Industry
-מזון ומסעדנות
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://mesi-hanaknik.zappy5.app/sitemap.xml
-- **Robots.txt**: https://mesi-hanaknik.zappy5.app/robots.txt
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt

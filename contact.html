@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="he" dir="rtl"><head>
+<!DOCTYPE html><html lang="he" dir="rtl" data-zappy-site-type="ecommerce"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - מסי הנקניק</title>
@@ -85,7 +85,7 @@
   // Configuration
   var config = {
     websiteId: '4871470a-ccba-499b-a8c6-d19f1a97ff7b',
-    apiUrl: 'http://localhost:5001/api/analytics/track',
+    apiUrl: 'https://qaapi.zappy5.com/api/analytics/track',
     sessionDuration: 30 * 60 * 1000, // 30 minutes
     visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
     trackPageViews: true,
@@ -323,6 +323,7 @@
     </style>
 </head>
 <body>
+<script>window.ZAPPY_WEBSITE_ID = "4871470a-ccba-499b-a8c6-d19f1a97ff7b";window.ZAPPY_API_BASE = "http://localhost:5001";</script>
 
 <!-- Zappy Attribution Header -->
 <div id="zappy-attribution-header" class="zappy-header" style="display: none;">
@@ -339,7 +340,7 @@
       <div class="search-results" id="mobile-search-results"></div>
     </div>
   
-<script>window.ZAPPY_4871470a-ccba-499b-a8c6-d19f1a97ff7b = "4871470a-ccba-499b-a8c6-d19f1a97ff7b";window.ZAPPY_API_BASE = "http://localhost:5001";</script>
+<script>window.ZAPPY_WEBSITE_ID = "4871470a-ccba-499b-a8c6-d19f1a97ff7b";window.ZAPPY_API_BASE = "http://localhost:5001";</script>
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">

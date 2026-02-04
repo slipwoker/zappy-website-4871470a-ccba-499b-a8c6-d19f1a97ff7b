@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# מסי הנקניק — Generative Engine Optimization Map
+
+> A מזון ומסעדנות business.
 
 ---
 
@@ -66,7 +68,17 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About מסי הנקניק
+מסי הנקניק is a business in the מזון ומסעדנות industry.
+
+## Target Audience
+- חובבי בשר גורמה
+- חובבי קולינריה
+- מתכנני אירועים
+
+## Industry
+מזון ומסעדנות
+
 ---
 
 # Additional Resources

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -218,78 +218,25 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/styles.css">
-    <style id="zappy-dropdown-submenu-styles">
-      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
-      /* Base styles for dropdown submenus - parent must be positioned */
-      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
-      /* Submenu base - hidden by default */
-      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
-      /* CRITICAL: Desktop hover styles to show dropdown */
-      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Submenu item styling */
-      .sub-menu li { list-style: none; margin: 0; padding: 0; }
-      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
-      .sub-menu a:hover { background-color: #f5f5f5; }
-      /* RTL (Hebrew/Arabic) dropdown positioning */
-      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
-      /* Hide empty dropdown menus */
-      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
-      /* Desktop: show submenu on Menu Group hover */
-      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Menu Group title styling */
-      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
-      
-      /* ========== MOBILE SUBMENU STYLES ========== */
-      @media (max-width: 768px) {
-        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
-        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
-        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
-        /* Disable hover behavior on mobile */
-        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
-        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
-        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
-        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
-        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
-        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
-        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
-        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
-        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
-        .sub-menu a { padding: 10px 0 !important; display: block !important; }
-        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
-      }
-      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
-    </style>
-</head>
-<body>
-<!DOCTYPE ><html lang="he" dir="rtl" data-zappy-site-type="ecommerce"><head>
-  <meta charset="UTF-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <title>Home - מסי הנקניק</title>
-  <meta name="description" content="Home - מסי הנקניק provides professional מזון ומסעדנות services. Specializing in חנות נקניקים."></meta>
-  <meta name="keywords" content="חנות נקניקים, נקניקיות גורמה בישראל, חנות נקניקים מומלצת, נקניקיות לאירועים ומסיבות"></meta>
-  <meta name="robots" content="index, follow"></meta>
+    <meta property="og:title" content="Home - מסי הנקניק">
+  <meta property="og:description" content="Home - מסי הנקניק provides professional מזון ומסעדנות services. Specializing in חנות נקניקים.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
   
-  <meta property="og:title" content="Home - מסי הנקניק"></meta>
-  <meta property="og:description" content="Home - מסי הנקניק provides professional מזון ומסעדנות services. Specializing in חנות נקניקים."></meta>
-  <meta property="og:type" content="website"></meta>
-  <meta property="og:locale" content="he_IL"></meta>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Home - מסי הנקניק">
+  <meta name="twitter:description" content="Home - מסי הנקניק provides professional מזון ומסעדנות services. Specializing in חנות נקניקים.">
   
-  <meta name="twitter:card" content="summary_large_image"></meta>
-  <meta name="twitter:title" content="Home - מסי הנקניק"></meta>
-  <meta name="twitter:description" content="Home - מסי הנקניק provides professional מזון ומסעדנות services. Specializing in חנות נקניקים."></meta>
-  <link rel="stylesheet" href="/styles.css"></link>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"></link>
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"></link>
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"></link>
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"></link>
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png"></link>
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png"></link>
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"></link>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <style>
 /* Zappy Attribution Header Styles */
 .zappy-header {
@@ -338,42 +285,122 @@
   opacity: 0.7;
 }</style>
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; position: relative !important; min-height: 44px !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; min-width: 0 !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; min-width: 0 !important; padding: 0 !important; line-height: inherit !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; color: var(--text-dark) !important; position: absolute !important; top: 0 !important; right: 0 !important; left: auto !important; z-index: 2 !important; }
+        [dir="rtl"] .mobile-submenu-toggle, html[lang="he"] .mobile-submenu-toggle, html[lang="ar"] .mobile-submenu-toggle { left: 0 !important; right: auto !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; color: var(--text-dark) !important; }
+        .navbar .sub-menu li a, nav.navbar .sub-menu li a, .zappy-products-dropdown .sub-menu a { color: var(--text-dark) !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+
+    <style id="mobile-lang-menu-deployed-css">
+    @media (max-width: 768px) {
+      .lang-switcher,
+      .nav-cta-container .lang-switcher,
+      .nav-container .lang-switcher,
+      .navbar .lang-switcher,
+      .navbar .nav-cta-container .lang-switcher,
+      .nav-icons-left .lang-switcher,
+      .nav-ecommerce-icons .lang-switcher { display: none !important; }
+      .mobile-lang-menu { width: 100%; border-top: 1px solid rgba(128,128,128,0.2); padding: 8px 0 0 0; margin-top: 8px; }
+      .mobile-lang-toggle { display: flex !important; align-items: center; justify-content: space-between; width: 100%; padding: 12px 16px; background: none; border: none; cursor: pointer; font-size: 15px; color: inherit; font-family: inherit; }
+      .mobile-lang-toggle::after { content: ''; display: inline-block; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 0.3s ease; margin-left: 8px; }
+      .mobile-lang-toggle.expanded::after { transform: rotate(-135deg); }
+      .mobile-lang-options { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .mobile-lang-options.expanded { max-height: 300px; }
+      .mobile-lang-option { display: flex !important; align-items: center; gap: 10px; padding: 10px 24px; text-decoration: none; color: inherit; font-size: 14px; font-family: inherit; }
+      .mobile-lang-option:hover { background: rgba(128,128,128,0.1); }
+      .mobile-lang-option.active { font-weight: 600; opacity: 0.7; pointer-events: none; }
+      .mobile-lang-option img { width: 20px; height: 20px; border-radius: 50%; }
+    }
+    @media (min-width: 769px) {
+      .mobile-lang-menu { display: none !important; }
+    }
+    </style>
+
+    <style id="zappy-widget-visibility">
+      #mic-access-tool-general-button, .mic-access-tool-general-button,
+      #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+      ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+      #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+        display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+      }
+    </style>
 </head>
 <body>
-<script>window.ZAPPY_WEBSITE_ID = "4871470a-ccba-499b-a8c6-d19f1a97ff7b";window.ZAPPY_API_BASE = "http://qaapi.zappy5.com:5001";</script>
+
+<script>window.ZAPPY_WEBSITE_ID = "4871470a-ccba-499b-a8c6-d19f1a97ff7b";window.ZAPPY_API_BASE = "http://localhost:5001";</script>
 
 <!-- Zappy Attribution Header -->
 <div id="zappy-attribution-header" class="zappy-header" style="display: none;">
-  <p>Happily created by&amp;nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
 </div>
 
     <div class="mobile-search-panel" id="mobile-search-panel">
       <div class="search-wrapper">
-        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off"></input>
+        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
         <button class="close-search" id="close-mobile-search">
-          <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
         </button>
       </div>
       <div class="search-results" id="mobile-search-results"></div>
     </div>
   
-<script>window.ZAPPY_WEBSITE_ID = "4871470a-ccba-499b-a8c6-d19f1a97ff7b";window.ZAPPY_API_BASE = "http://qaapi.zappy5.com:5001";</script>
+<script>window.ZAPPY_WEBSITE_ID = "4871470a-ccba-499b-a8c6-d19f1a97ff7b";window.ZAPPY_API_BASE = "http://localhost:5001";</script>
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-    <svg class="hamburger-icon" width="24" height="24" viewbox="0 0 24 24" fill="none">
+    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
-    <svg class="close-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" style="display: none;">
+    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
       <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
   </button>
   
   <button class="phone-header-btn" aria-label="Call">
-    <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
   </button>
@@ -381,14 +408,14 @@
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/business-logo.webp" alt="מסי הנקניק" class="logo"></img>
+        <img src="/assets/business-logo.webp" alt="מסי הנקניק" class="logo">
       </a>
     </div><ul class="nav-menu" id="navMenu">
 
     <li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
         מוצרים
-        <svg class="dropdown-arrow" width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M6 9l6 6 6-6"></path>
         </svg>
       </a>
@@ -477,7 +504,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &&rgb.length &amp;gt;= 3) {
+    if (rgb &&rgb.length >= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -562,7 +589,7 @@
           }
           
           /* ===========================================
-             MOBILE LANGUAGE SWITCHER POSITIONING &amp;amp; COLOR
+             MOBILE LANGUAGE SWITCHER POSITIONING & COLOR
              =========================================== */
           .nav-cta-container {
             display: flex !important;
@@ -576,7 +603,7 @@
           
           /* Hide CTA button on mobile */
           .nav-cta-container .nav-cta-btn,
-          .nav-cta-container &amp;gt; a:not(.lang-option):not(.lang-switcher-current) {
+          .nav-cta-container > a:not(.lang-option):not(.lang-switcher-current) {
             display: none !important;
           }
           
@@ -607,7 +634,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &amp;lt;= 768;
+      const isMobileViewport = window.innerWidth <= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -765,7 +792,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &amp;gt; 0 
+        const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '[business_phone]';
         
@@ -782,7 +809,7 @@
     const handleWhatsAppVisibility = function() {
       const whatsappBtn = document.querySelector('.whatsapp-float');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth &amp;gt;= 769;
+        const isDesktop = window.innerWidth >= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -825,7 +852,7 @@
     <div class="hero-content">
       <h1>נקניקים טריים מהגריל <span class="accent-word">בכל ביס</span></h1>
       
-      <p class="hero-intro">חומרי גלם איכותיים, תערובות תבלינים ייחודיות וחוויית גריל תוססת שמביאה את הטעם הביתי האמיתי ישירות אליכם.</p>
+      <p class="hero-intro">חומרי גלם איכותיים, תערובות תבלינים ייחודיות וחוויית גריל תוססת שמביאה את הטעם הביתי האמיתי ישירות אליכם. ניסיון</p>
       
       <div class="hero-benefits">
         <div class="benefit-item">
@@ -846,16 +873,16 @@
     </div>
     
     <div class="hero-imagery">
-      <svg class="diagonal-accent" width="80" height="400" viewbox="0 0 80 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="diagonal-accent" width="80" height="400" viewBox="0 0 80 400" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="40" y1="0" x2="40" y2="400" stroke="currentColor" stroke-width="3" stroke-linecap="round"></line>
       </svg>
       
       <div class="main-image-frame">
-        <img data-placeholder="home-hero-main-sausage" data-context="A vibrant close-up photo of freshly grilled artisan sausages on a hot grill with visible char marks and steam rising, warm golden lighting, appetizing food photography for a gourmet sausage restaurant, shallow depth of field focusing on the juicy texture" width="600" height="700" src="/assets/site-home-image-1.webp" alt="נקניקים טריים על הגריל במסי הנקניק"></img>
+        <img data-placeholder="home-hero-main-sausage" data-context="A vibrant close-up photo of freshly grilled artisan sausages on a hot grill with visible char marks and steam rising, warm golden lighting, appetizing food photography for a gourmet sausage restaurant, shallow depth of field focusing on the juicy texture" width="600" height="700" src="/assets/site-home-image-1.webp" alt="נקניקים טריים על הגריל במסי הנקניק">
       </div>
       
       <div class="supporting-image-tile">
-        <img data-placeholder="home-hero-spices-ingredients" data-context="Overhead flat lay of fresh spices, herbs, and premium meat ingredients on a rustic wooden cutting board, warm natural lighting, food preparation scene for artisan sausage making, colorful and appetizing" width="280" height="320" src="/assets/site-home-image-2.webp" alt="תבלינים וחומרי גלם איכותיים"></img>
+        <img data-placeholder="home-hero-spices-ingredients" data-context="Overhead flat lay of fresh spices, herbs, and premium meat ingredients on a rustic wooden cutting board, warm natural lighting, food preparation scene for artisan sausage making, colorful and appetizing" width="280" height="320" src="/assets/site-home-image-2.webp" alt="תבלינים וחומרי גלם איכותיים">
       </div>
     </div>
   </div>
@@ -898,7 +925,7 @@
     
     <div class="capabilities-layout">
       <div class="capabilities-image-card">
-        <img data-placeholder="home-capabilities-image-1" data-context="Close-up photo of premium sausages grilling on a hot grill with shallow depth of field, showing char marks and juicy texture, warm lighting, appetizing steam rising, professional food photography for מסי הנקניק restaurant" width="600" height="800" src="/assets/site-home-image-3.webp" alt="נקניקיות טריות על הגריל"></img>
+        <img data-placeholder="home-capabilities-image-1" data-context="Close-up photo of premium sausages grilling on a hot grill with shallow depth of field, showing char marks and juicy texture, warm lighting, appetizing steam rising, professional food photography for מסי הנקניק restaurant" width="600" height="800" src="/assets/site-home-image-3.webp" alt="נקניקיות טריות על הגריל">
         <div class="accent-chip" aria-hidden="true"></div>
       </div>
       
@@ -927,13 +954,13 @@
   </div>
   
   <div class="diagonal-divider" aria-hidden="true">
-    <svg viewbox="0 0 1200 80" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 80 L1200 0 L1200 80 Z" fill="var(--bg-light)"></path>
     </svg>
   </div>
 </section>
 
-<section class="home-showcase-section" data-layout-spec="Home-showcase">
+<section class="home-showcase-section" data-layout-spec="Home-showcase" id="zappy-section-4">
   <div class="showcase-container">
     <div class="showcase-header">
       <h2>מהגריל</h2>
@@ -942,55 +969,55 @@
     
     <div class="showcase-grid">
       <div class="grid-item grid-hero">
-        <img data-placeholder="home-showcase-image-1" data-context="Close-up of artisan grilled sausages on a hot grill with beautiful char marks and glistening juices, professional food photography with shallow depth of field, warm lighting highlighting the texture and browning, Hebrew kosher restaurant setting" width="800" height="900" src="/assets/site-home-image-4.webp" alt="נקניקיות טריות על הגריל"></img>
+        <img data-placeholder="home-showcase-image-1" data-context="Close-up of artisan grilled sausages on a hot grill with beautiful char marks and glistening juices, professional food photography with shallow depth of field, warm lighting highlighting the texture and browning, Hebrew kosher restaurant setting" width="800" height="900" src="/assets/site-home-image-4.webp" alt="נקניקיות טריות על הגריל" data-element-type="image" data-element-id="img-1770225911141-8jg9xt379" class="zappy-editable-image" data-resize-handler-attached="true">
       </div>
       
       <div class="grid-item grid-medium">
-        <img data-placeholder="home-showcase-image-2" data-context="Wooden cutting board with sliced grilled sausages arranged artistically, fresh herbs and spices scattered around, rustic Israeli restaurant styling, natural lighting, top-down view" width="400" height="450" src="/assets/site-home-image-5.webp" alt="נקניקיות פרוסות על קרש חיתוך"></img>
+        <div data-zappy-zoom-wrapper="true" data-element-id="img-1770225911141-nc3uko5v5" data-element-type="image" data-zappy-zoom-wrapper-width="386px" data-zappy-zoom-wrapper-height="655px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 386px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 655px !important; display: block !important;"><img data-placeholder="home-showcase-image-2" data-context="Wooden cutting board with sliced grilled sausages arranged artistically, fresh herbs and spices scattered around, rustic Israeli restaurant styling, natural lighting, top-down view" width="400" height="450" src="/assets/site-home-image-5.webp" alt="נקניקיות פרוסות על קרש חיתוך" data-element-type="image" data-element-id="img-1770225911141-nc3uko5v5" class="zappy-editable-image" data-resize-handler-attached="true" data-original-position="static" style="position: absolute !important; object-position: 0% 44% !important; margin: 0px !important; left: 0% !important; top: 0% !important; width: 126.701% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important;" data-zappy-zoom="1"></div>
       </div>
       
       <div class="grid-item grid-text-card">
         <div class="text-card">
           <h3>מלאכה שאפשר לטעום</h3>
-          <p>תזמון מדויק, חום מושלם ותיבול מאוזן – כל פרט נוצר כדי להעניק לכם חוויה בלתי נשכחת</p>
+          <p style="">תזמון מדויק, חום מושלם ותיבול מאוזן – כל פרט נוצר כדי להעניק לכם חוויה בלתי נשכחת</p>
         </div>
       </div>
       
       <div class="grid-item grid-small">
-        <img data-placeholder="home-showcase-image-3" data-context="Colorful array of fresh spices and herbs in small bowls - paprika, black pepper, garlic, fresh rosemary and thyme, arranged on a rustic wooden surface, professional culinary photography" width="400" height="300" src="/assets/site-home-image-6.webp" alt="תבלינים ועשבי תיבול טריים"></img>
+        <img data-placeholder="home-showcase-image-3" data-context="Colorful array of fresh spices and herbs in small bowls - paprika, black pepper, garlic, fresh rosemary and thyme, arranged on a rustic wooden surface, professional culinary photography" width="400" height="300" src="/assets/site-home-image-6.webp" alt="תבלינים ועשבי תיבול טריים" data-element-type="image" data-element-id="img-1770225911141-3ta07i759" class="zappy-editable-image" data-resize-handler-attached="true" data-original-position="static" style="position: relative;">
       </div>
       
       <div class="grid-item grid-medium">
-        <img data-placeholder="home-showcase-image-4" data-context="Hands of a chef finishing grilled sausages with artisan mustard using a brush, close-up shot showing attention to detail, professional kitchen atmosphere, warm golden lighting" width="400" height="450" src="/assets/site-home-image-7.webp" alt="גימור נקניקיות עם חרדל איכותי"></img>
+        <img data-placeholder="home-showcase-image-4" data-context="Hands of a chef finishing grilled sausages with artisan mustard using a brush, close-up shot showing attention to detail, professional kitchen atmosphere, warm golden lighting" width="400" height="450" src="/assets/site-home-image-7.webp" alt="גימור נקניקיות עם חרדל איכותי" data-element-type="image" data-element-id="img-1770225911141-qtajn3rba" class="zappy-editable-image" data-resize-handler-attached="true" data-original-position="static" style="position: relative;">
       </div>
       
       <div class="grid-item grid-small">
-        <img data-placeholder="home-showcase-image-5" data-context="Dramatic close-up of charcoal grill with glowing embers and flames, beautiful grill marks pattern on the grate, smoke wisps rising, professional BBQ photography with warm orange and red tones" width="400" height="300" src="/assets/site-home-image-8.webp" alt="פחמים לוהטים וסימני גריל"></img>
+        <img data-placeholder="home-showcase-image-5" data-context="Dramatic close-up of charcoal grill with glowing embers and flames, beautiful grill marks pattern on the grate, smoke wisps rising, professional BBQ photography with warm orange and red tones" width="400" height="300" src="/assets/site-home-image-8.webp" alt="פחמים לוהטים וסימני גריל" data-element-type="image" data-element-id="img-1770225911141-moti67kvk" class="zappy-editable-image" data-resize-handler-attached="true" data-original-position="static" style="position: relative;">
       </div>
       
       <div class="grid-item grid-medium">
-        <img data-placeholder="home-showcase-image-6" data-context="Elegant serving tray with grilled sausages arranged professionally, garnished with fresh herbs, colorful vegetables on the side, restaurant-quality plating, overhead view with natural lighting" width="400" height="450" src="/assets/site-home-image-9.webp" alt="מגש הגשה מעוצב"></img>
+        <img data-placeholder="home-showcase-image-6" data-context="Elegant serving tray with grilled sausages arranged professionally, garnished with fresh herbs, colorful vegetables on the side, restaurant-quality plating, overhead view with natural lighting" width="400" height="450" src="/assets/site-home-image-9.webp" alt="מגש הגשה מעוצב" data-element-type="image" data-element-id="img-1770225911141-6f54k6822" class="zappy-editable-image" data-resize-handler-attached="true" data-original-position="static" style="position: relative;">
       </div>
       
       <div class="grid-item grid-small">
-        <img data-placeholder="home-showcase-image-7" data-context="Detail shot of perfectly grilled sausage being cut with a knife, showing juicy interior texture, steam rising, professional food photography with dramatic lighting and shallow depth of field" width="400" height="300" src="/assets/site-home-image-10.webp" alt="פרט של נקניקייה חתוכה"></img>
+        <img data-placeholder="home-showcase-image-7" data-context="Detail shot of perfectly grilled sausage being cut with a knife, showing juicy interior texture, steam rising, professional food photography with dramatic lighting and shallow depth of field" width="400" height="300" src="/assets/site-home-image-10.webp" alt="פרט של נקניקייה חתוכה" data-element-type="image" data-element-id="img-1770225911141-ck4g89iwc" class="zappy-editable-image" data-resize-handler-attached="true" data-original-position="static" style="position: relative;">
       </div>
     </div>
   </div>
   
   <div class="section-transition">
-    <svg class="transition-curve" viewbox="0 0 1200 120" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="transition-curve" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0,60 Q300,20 600,60 T1200,60" fill="none" stroke="var(--primary)" stroke-width="3"></path>
     </svg>
   </div>
   
   <div class="background-illustration" aria-hidden="true">
-    <svg class="smoke-illustration" viewbox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+    <svg class="smoke-illustration" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
       <path d="M50,250 Q60,200 50,150 Q40,100 50,50" stroke="var(--border-light)" stroke-width="1.5" fill="none" opacity="0.3"></path>
       <path d="M80,250 Q90,200 80,150 Q70,100 80,50" stroke="var(--border-light)" stroke-width="1.5" fill="none" opacity="0.3"></path>
       <path d="M110,250 Q120,200 110,150 Q100,100 110,50" stroke="var(--border-light)" stroke-width="1.5" fill="none" opacity="0.3"></path>
     </svg>
-    <svg class="spice-illustration" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <svg class="spice-illustration" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <circle cx="30" cy="30" r="3" fill="var(--border-light)" opacity="0.4"></circle>
       <circle cx="50" cy="20" r="2" fill="var(--border-light)" opacity="0.4"></circle>
       <circle cx="70" cy="35" r="2.5" fill="var(--border-light)" opacity="0.4"></circle>
@@ -1046,7 +1073,7 @@
 
   <!-- SVG Curved Divider at Bottom -->
   <div class="section-divider">
-    <svg viewbox="0 0 1200 120" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0,60 C200,20 400,80 600,50 C800,20 1000,70 1200,40 L1200,120 L0,120 Z" fill="var(--bg-light)"></path>
     </svg>
   </div>
@@ -1067,7 +1094,7 @@
         </div>
       </div>
       <div class="home-cta-section__image-wrapper">
-        <img data-placeholder="home-cta-image-1" data-context="Close-up artistic shot of golden mustard sauce being drizzled over premium sausages, with scattered spices (paprika, black pepper) on a warm wooden surface, professional food photography with shallow depth of field, warm lighting highlighting the texture and quality of artisanal sausages for a gourmet Israeli deli" width="600" height="400" src="/assets/site-home-image-11.webp" alt="טיפות חרדל זהוב על נקניקיות גורמה" class="home-cta-section__decorative-image"></img>
+        <img data-placeholder="home-cta-image-1" data-context="Close-up artistic shot of golden mustard sauce being drizzled over premium sausages, with scattered spices (paprika, black pepper) on a warm wooden surface, professional food photography with shallow depth of field, warm lighting highlighting the texture and quality of artisanal sausages for a gourmet Israeli deli" width="600" height="400" src="/assets/site-home-image-11.webp" alt="טיפות חרדל זהוב על נקניקיות גורמה" class="home-cta-section__decorative-image">
       </div>
     </div>
     <div class="home-cta-section__footer-preview">
@@ -1086,7 +1113,7 @@
   <div class="footer-container">
     <div class="footer-content">
       <div class="footer-section company-info">
-        <img src="/assets/business-logo.webp" alt="מסי הנקניק" class="logo"></img>
+        <img src="/assets/business-logo.webp" alt="מסי הנקניק" class="logo">
         <p class="company-description">המקום המושלם לחוויית נקניקים ייחודית ואיכותית</p>
         <div class="social-links">
           <a href="[facebook_handle]" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1146,10 +1173,7 @@
     <i class="fab fa-whatsapp"></i>
   </a>
   
-  <script src="/script.js"></script>
-
-
-<!-- Zappy Attribution Header Script -->
+  <!-- Zappy Attribution Header Script -->
 <script>
 (function() {
   var websiteId = '4871470a-ccba-499b-a8c6-d19f1a97ff7b';
@@ -1179,7 +1203,7 @@
           header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
           // Fix child elements that might have position: fixed from old CSS
           var children = header.querySelectorAll('*');
-          for (var i = 0; i &amp;lt; children.length; i++) {
+          for (var i = 0; i < children.length; i++) {
             children[i].style.position = 'static';
           }
           // Get header height
@@ -1187,7 +1211,7 @@
           // Find and fix navbar to be fixed as well (prevents gap at top of page)
           var navSelectors = ['nav', '.navbar', '.nav'];
           var navbar = null;
-          for (var j = 0; j &amp;lt; navSelectors.length; j++) {
+          for (var j = 0; j < navSelectors.length; j++) {
             navbar = document.querySelector(navSelectors[j]);
             if (navbar &&  navbar.id !== 'zappy-attribution-header') break;
             navbar = null;
@@ -1208,28 +1232,155 @@
 })();
 </script>
     <div data-integration="accessibility:toolbar"></div>
-</body></html>
+
     <script src="/script.js"></script>
+
     <script id="zappy-mobile-submenu-script">
     (function() {
       function initMobileSubmenuToggles() {
-        if (window.innerWidth > 768) { document.querySelectorAll('.mobile-submenu-toggle').forEach(function(b){b.remove();}); document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(m){m.classList.remove('mobile-expanded');}); return; }
-        document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)').forEach(function(li) {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
           if (li.querySelector('.mobile-submenu-toggle')) return;
-          var sm = li.querySelector('.sub-menu'), pl = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
-          if (!sm || !pl) return;
-          var tb = document.createElement('button'); tb.className = 'mobile-submenu-toggle'; tb.setAttribute('aria-label', 'Toggle submenu'); tb.setAttribute('type', 'button');
-          pl.insertAdjacentElement('afterend', tb);
-          tb.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation();
-            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(m) { if (m !== sm) { m.classList.remove('mobile-expanded'); var t = m.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }});
-            sm.classList.toggle('mobile-expanded'); tb.classList.toggle('expanded');
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
           });
         });
       }
-      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); } else { initMobileSubmenuToggles(); }
-      window.addEventListener('resize', function() { clearTimeout(window._mrt); window._mrt = setTimeout(initMobileSubmenuToggles, 250); });
-      var observer = new MutationObserver(function(mutations) { mutations.forEach(function(mutation) { if (mutation.type === 'attributes') { var target = mutation.target; if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) { setTimeout(initMobileSubmenuToggles, 100); } } }); });
-      setTimeout(function() { document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) { observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] }); }); }, 500);
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
+    })();
+    </script>
+
+    <script id="zappy-mobile-lang-menu-script">
+    (function() {
+      function initMobileLangMenu() {
+        if (window.innerWidth > 768) {
+          var existingMenu = document.querySelector('.mobile-lang-menu');
+          if (existingMenu) existingMenu.remove();
+          return;
+        }
+        if (document.querySelector('.mobile-lang-menu')) return;
+        var switcher = document.querySelector('.lang-switcher');
+        if (!switcher) return;
+        var dropdown = switcher.querySelector('.lang-switcher-dropdown');
+        if (!dropdown) return;
+        var options = dropdown.querySelectorAll('.lang-option');
+        if (options.length === 0) return;
+        var navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu') || document.querySelector('nav ul');
+        if (!navMenu) return;
+        var currentLang = document.documentElement.lang || 'en';
+        var langConfigs = {
+          he: {name:'עברית',flag:'https://api.iconify.design/circle-flags/il.svg'},
+          en: {name:'English',flag:'https://api.iconify.design/circle-flags/us.svg'},
+          ar: {name:'العربية',flag:'https://api.iconify.design/circle-flags/sa.svg'},
+          fr: {name:'Français',flag:'https://api.iconify.design/circle-flags/fr.svg'},
+          es: {name:'Español',flag:'https://api.iconify.design/circle-flags/es.svg'},
+          de: {name:'Deutsch',flag:'https://api.iconify.design/circle-flags/de.svg'},
+          ru: {name:'Русский',flag:'https://api.iconify.design/circle-flags/ru.svg'},
+          zh: {name:'中文',flag:'https://api.iconify.design/circle-flags/cn.svg'},
+          ja: {name:'日本語',flag:'https://api.iconify.design/circle-flags/jp.svg'},
+          pt: {name:'Português',flag:'https://api.iconify.design/circle-flags/br.svg'},
+          it: {name:'Italiano',flag:'https://api.iconify.design/circle-flags/it.svg'},
+          ko: {name:'한국어',flag:'https://api.iconify.design/circle-flags/kr.svg'}
+        };
+        var container = document.createElement('div');
+        container.className = 'mobile-lang-menu';
+        var currentConfig = langConfigs[currentLang] || {name:currentLang,flag:''};
+        var toggleBtn = document.createElement('button');
+        toggleBtn.className = 'mobile-lang-toggle';
+        toggleBtn.type = 'button';
+        var currentFlagHtml = currentConfig.flag ? '<img src="' + currentConfig.flag + '" width="20" height="20" alt="" style="border-radius:50%;margin-right:8px;margin-left:8px;">' : '';
+        toggleBtn.innerHTML = currentFlagHtml + currentConfig.name;
+        container.appendChild(toggleBtn);
+        var optionsDiv = document.createElement('div');
+        optionsDiv.className = 'mobile-lang-options';
+        var currentLink = document.createElement('a');
+        currentLink.className = 'mobile-lang-option active';
+        currentLink.href = '#';
+        currentLink.innerHTML = currentFlagHtml + currentConfig.name;
+        optionsDiv.appendChild(currentLink);
+        options.forEach(function(opt) {
+          var link = document.createElement('a');
+          link.className = 'mobile-lang-option';
+          link.href = opt.getAttribute('href');
+          link.innerHTML = opt.innerHTML;
+          optionsDiv.appendChild(link);
+        });
+        container.appendChild(optionsDiv);
+        navMenu.appendChild(container);
+        toggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleBtn.classList.toggle('expanded');
+          optionsDiv.classList.toggle('expanded');
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileLangMenu); }
+      else { initMobileLangMenu(); }
+      window.addEventListener('resize', function() { clearTimeout(window._mlrt); window._mlrt = setTimeout(initMobileLangMenu, 250); });
+    })();
+    </script>
+
+    <script>
+    (function(){
+      if(window.innerWidth>768)return;
+      function fixZW(){
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          var cw=w.style.getPropertyValue('width');
+          if(!cw||cw==='100%')return;
+          w.style.setProperty('width','100%','important');
+          w.style.setProperty('max-width','100%','important');
+          w.style.setProperty('height','auto','important');
+          var img=w.querySelector('img');
+          if(img){
+            img.style.setProperty('position','relative','important');
+            img.style.setProperty('width','100%','important');
+            img.style.setProperty('height','auto','important');
+            img.style.setProperty('max-width','100%','important');
+            img.style.setProperty('max-height','400px','important');
+            img.style.setProperty('object-fit','cover','important');
+            img.style.setProperty('left','0','important');
+            img.style.setProperty('top','0','important');
+          }
+        });
+      }
+      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fixZW);
+      else setTimeout(fixZW,50);
     })();
     </script>
 </body>
